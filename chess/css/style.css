@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background-color: hsl(0deg, 10%, 10%);
+  background-color: hsl(0deg, 10%, 30%);
   color: hsl(0deg, 0%, 100%);
 }
 
@@ -19,6 +19,34 @@ body {
   display: grid;
   grid-template-columns: var(--square-size) auto var(--square-size);
   grid-template-rows: var(--square-size) auto var(--square-size);
+  transform: rotateX(60deg) rotateZ(45deg);
+  transform-style: preserve-3d;
+}
+
+.side {
+  position: absolute;
+  background-color: hsl(35deg, 80%, 80%);
+  border-style: solid;
+  border-width: 5px;
+  border-color: hsl(35deg, 40%, 40%);
+}
+
+.side[data-side="1"] {
+  width: 500px;
+  height: 50px;
+  bottom: -50px;
+  left: 0px;
+  transform-origin: top;
+  rotate: 1 0 0 270deg;
+}
+
+.side[data-side="2"] {
+  width: 50px;
+  height: 500px;
+  bottom: 0px;
+  right: -50px;
+  transform-origin: left;
+  rotate: 0 1 0 90deg;
 }
 
 #chessboard {
