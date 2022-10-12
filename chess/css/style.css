@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
   --square-size: 50px;
+  --clr-primary-light: hsl(35deg 80% 80%);
+  --clr-primary-dark: hsl(35deg 40% 40%);
+  --clr-secondary: hsl(20deg 50% 25%);
+  --clr-200: hsl(20deg 50% 15%);
 }
 
 html {
@@ -25,13 +29,13 @@ body {
 
 .side {
   position: absolute;
-  background-color: hsl(35deg, 80%, 80%);
+  background-color: var(--clr-200);
   border-style: solid;
   border-width: 5px;
-  border-color: hsl(35deg, 40%, 40%);
+  border-color: var(--clr-primary-dark);
 }
 
-.side[data-side="1"] {
+.side[data-side=south] {
   width: 500px;
   height: 50px;
   bottom: -50px;
@@ -40,7 +44,16 @@ body {
   rotate: 1 0 0 270deg;
 }
 
-.side[data-side="2"] {
+.side[data-side=north] {
+  width: 500px;
+  height: 50px;
+  top: -50px;
+  right: 0px;
+  transform-origin: bottom;
+  rotate: 1 0 0 90deg;
+}
+
+.side[data-side=east] {
   width: 50px;
   height: 500px;
   bottom: 0px;
@@ -49,16 +62,31 @@ body {
   rotate: 0 1 0 90deg;
 }
 
+.side[data-side=west] {
+  width: 50px;
+  height: 500px;
+  bottom: 0px;
+  left: -50px;
+  transform-origin: right;
+  rotate: 0 1 0 270deg;
+}
+
+.side[data-side=bottom] {
+  height: 500px;
+  width: 500px;
+  transform: translateZ(-50px);
+}
+
 #chessboard {
   display: grid;
   grid-template-columns: repeat(8, var(--square-size));
   grid-template-rows: repeat(8, var(--square-size));
 }
 #chessboard div.square--light {
-  background-color: hsl(35deg, 80%, 80%);
+  background-color: var(--clr-primary-light);
 }
 #chessboard div.square--dark {
-  background-color: hsl(35deg, 40%, 40%);
+  background-color: var(--clr-primary-dark);
 }
 
 div[data-rotate="180"] div {
@@ -84,9 +112,23 @@ div[data-rotate="180"] div {
 }
 
 .files, .ranks {
-  background-color: hsl(20deg, 50%, 25%);
+  background-color: var(--clr-secondary);
 }
 
 .corner {
-  background-color: hsl(20deg, 50%, 15%);
+  background-color: var(--clr-200);
+}
+
+.border {
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--clr-primary-dark);
+}
+
+.tower {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: var(--clr-200);
 }/*# sourceMappingURL=style.css.map */
