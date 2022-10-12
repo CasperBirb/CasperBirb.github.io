@@ -6,10 +6,10 @@ let deg = 0;
 console.log(board);
 function rotateBoard() {
     deg++
-    // board.style.webkitTransform = 'rotate('+deg+'deg)'; 
-    // board.style.mozTransform    = 'rotate('+deg+'deg)'; 
-    // board.style.msTransform     = 'rotate('+deg+'deg)'; 
-    // board.style.oTransform      = 'rotate('+deg+'deg)'; 
+    board.style.webkitTransform = 'rotateX('+deg+'deg) rotateZ(45deg)'; 
+    board.style.mozTransform    = 'rotateX('+deg+'deg) rotateZ(45deg)'; 
+    board.style.msTransform     = 'rotateX('+deg+'deg) rotateZ(45deg)'; 
+    board.style.oTransform      = 'rotateX('+deg+'deg) rotateZ(45deg)'; 
     board.style.transform       = 'rotateX('+deg+'deg) rotateZ(45deg)'; 
 }
 setInterval(rotateBoard, 20);
