@@ -26,6 +26,9 @@ body {
   transform: rotateX(60deg) rotateZ(45deg);
   transform-style: preserve-3d;
 }
+#board div {
+  transform-style: preserve-3d;
+}
 
 .side {
   position: absolute;
@@ -81,6 +84,7 @@ body {
   display: grid;
   grid-template-columns: repeat(8, var(--square-size));
   grid-template-rows: repeat(8, var(--square-size));
+  transform-style: preserve-3d;
 }
 #chessboard div.square--light {
   background-color: var(--clr-primary-light);
@@ -131,4 +135,5 @@ div[data-rotate="180"] div {
   border-radius: 50%;
   margin: 5px;
   background-color: var(--clr-200);
+  rotate: 1 0 0 90deg;
 }/*# sourceMappingURL=style.css.map */

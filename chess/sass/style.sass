@@ -20,6 +20,8 @@ body
     grid-template-rows: var(--square-size) auto var(--square-size)
     transform: rotateX(60deg) rotateZ(45deg)
     transform-style: preserve-3d
+    div
+        transform-style: preserve-3d
 
 .side
     position: absolute
@@ -73,6 +75,7 @@ body
         background-color: var(--clr-primary-light)
     div.square--dark
         background-color: var(--clr-primary-dark)
+    transform-style: preserve-3d
 
 div[data-rotate="180"] div
     rotate: 180deg
@@ -102,3 +105,4 @@ div[data-rotate="180"] div
     border-radius: 50%
     margin: 5px
     background-color: var(--clr-200)
+    rotate: 1 0 0 90deg
