@@ -15,10 +15,10 @@ body
     color: hsl(0, 0%, 100%)
 
 #board
-    display: grid
-    grid-template-columns: var(--square-size) auto var(--square-size)
-    grid-template-rows: var(--square-size) auto var(--square-size)
-    transform: rotateX(60deg) rotateZ(45deg)
+    display: flex
+    justify-content: center
+    align-items: center
+    transform: rotateX(45deg) rotateZ(45deg)
     transform-style: preserve-3d
     div
         transform-style: preserve-3d
@@ -26,46 +26,46 @@ body
 .side
     position: absolute
     background-color: var(--clr-200)
-    border-style: solid
-    border-width: 5px
-    border-color: var(--clr-primary-dark)
+    
+.base
+    position: absolute
+.base[data-base="top"]
+    rotate: 1 0 0 0deg
+    transform: translateZ(25px)
+    display: grid
+    grid-template-columns: var(--square-size) auto var(--square-size)
+    grid-template-rows: var(--square-size) auto var(--square-size)
 
 .side[data-side="south"]
     width: 500px
     height: 50px
-    bottom: -50px
-    left: 0px
-    transform-origin: top
     rotate: 1 0 0 270deg
+    transform: translateZ(250px)
 
 .side[data-side="north"]
     width: 500px
     height: 50px
-    top: -50px
-    right: 0px
-    transform-origin: bottom
     rotate: 1 0 0 90deg
+    transform: translateZ(250px)
 
 .side[data-side="east"]
     width: 50px
     height: 500px
-    bottom: 0px
-    right: -50px
-    transform-origin: left
     rotate: 0 1 0 90deg
+    transform: translateZ(250px)
 
 .side[data-side="west"]
     width: 50px
     height: 500px
-    bottom: 0px
-    left: -50px
-    transform-origin: right
     rotate: 0 1 0 270deg
+    transform: translateZ(250px)
 
-.side[data-side="bottom"]
+.base[data-base="bottom"]
+    background-color: var(--clr-200)
     height: 500px
     width: 500px
-    transform: translateZ(-50px)
+    rotate: 1 0 0 180deg
+    transform: translateZ(25px)
 
 #chessboard 
     display: grid
@@ -75,7 +75,6 @@ body
         background-color: var(--clr-primary-light)
     div.square--dark
         background-color: var(--clr-primary-dark)
-    transform-style: preserve-3d
 
 div[data-rotate="180"] div
     rotate: 180deg
