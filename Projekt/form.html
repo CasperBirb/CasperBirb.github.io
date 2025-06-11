@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia</title>
+</head>
+<body>
+    <!--  -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="calculator.html">Kalkulator wzorów</a>
+        <a href="form.html">Zamówienia</a>
+    </nav>
+
+    <header>
+
+    </header>
+
+    <main>
+        <div>
+            <form action="">
+                <div>
+                    <button>Dodaj</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lp</th>
+                            <th>Wys.</th>
+                            <th>Top</th>
+                            <th>Bot</th>
+                            <th>Szer.</th>
+                            <th>Left</th>
+                            <th>Right</th>
+                            <th>Ilość</th>
+                            <th>2str</th>
+                            <th>Kolor</th>
+                            <th>Materiał</th>
+                            <th>Wykończenie</th>
+                            <th>Opis</th>
+                            <th>m2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                    <div id="entity-edit">
+                        <datalist id="edges">
+                            <option value=""></option>
+                            <option value="F">Uchwyt</option>
+                            <option value="+L">+ lewa kr.</option>
+                            <option value="F45st">Uchwyt 45st</option>
+                        </datalist>
+                        <label for="input__height">Wysokość</label><input type="number" name="height" id="input__height" min="0" step="1" max="3000" value="0">
+                        <label for="input__edge-top">Kr. górna</label><select list="edges" name="edge-top" id="input__edge-top">
+                            <option value=""></option>
+                            <option value="F">Uchwyt</option>
+                            <option value="+L">lewa kr. +Xmm</option>
+                            <option value="F45st">Uchwyt 45st</option>
+                        </select>
+                        <label for="input__edge-bot">Kr. dolna</label><select list="edges" name="edge-bot" id="input__edge-bot">
+                            <option value=""></option>
+                            <option value="F">Uchwyt</option>
+                            <option value="+L">lewa kr. +Xmm</option>
+                            <option value="F45st">Uchwyt 45st</option>
+                        </select>
+                        <label for="input__width">Szerokość</label><input type="number" name="width" id="input__width" min="0" step="1" max="2070" value="0">
+                        <label for="input__edge-left">Kr. lewa</label><select list="edges" name="edge-left" id="input__edge-left">
+                            <option value=""></option>
+                            <option value="F">Uchwyt</option>
+                            <option value="+L">lewa kr. +Xmm</option>
+                            <option value="F45st">Uchwyt 45st</option>
+                        </select>
+                        <label for="input__edge-right">Kr. prawa</label><select list="edges" name="edge-right" id="input__edge-right">
+                            <option value=""></option>
+                            <option value="F">Uchwyt</option>
+                            <option value="+L">lewa kr. +Xmm</option>
+                            <option value="F45st">Uchwyt 45st</option>
+                        </select>
+                        <label for="input__quantity">Ilość</label><input type="number" name="quantity" id="input__quantity" min="1" step="1" value="1">
+                        <label for="input__double-sided">2-stronnie</label><input type="checkbox" name="double-sided" id="input__double-sided">
+                        <label for="input__color">Kolor</label><input type="text" name="color" id="input__color" value="">
+                        <label for="input__material">Materiał</label><select name="material" id="input__material">
+                            <option value="mdf-4">MDF 4mm</option>
+                            <option value="mdf-12">MDF 12mm</option>
+                            <option value="mdf-18">MDF 18mm</option>
+                            <option value="mdf-19">MDF 19mm</option>
+                            <option value="mdf-22">MDF 22mm</option>
+                            <option value="mdf-36">MDF 36mm</option>
+                            <option value="mdf-38">MDF 38mm</option>
+                            <option value="fornir-19">Fornir 19mm</option>  
+                        </select>
+                        <Label for="input__finish">Wykończenie</Label><select name="finish" id="input__finish">
+                            <option value="fornir">Fornir</option>
+                            <option value="fornir-bejca">Fornir bejca</option>
+                            <option value="mat">Mat</option>
+                            <option value="polish">Połysk</option>
+                            <option value="raw">surowe</option>
+                        </select>
+                        <label for="input__description">Opis</label><input type="textbox" name="description" id="input__description" value="">
+                    </div>
+                </table>
+                <div>
+                    <button type="submit">Zapisz</button>
+                    <button type="reset">Wyczyść</button> 
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Bartosz Gębal &copy; 2025</p>
+    </footer>
+</body>
+</html>
