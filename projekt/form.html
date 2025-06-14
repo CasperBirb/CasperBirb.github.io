@@ -1,116 +1,220 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zamówienia</title>
-</head>
-<body>
-    <!--  -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="calculator.html">Kalkulator wzorów</a>
-        <a href="form.html">Zamówienia</a>
-    </nav>
-
-    <header>
-
-    </header>
-
-    <main>
-        <div>
-            <form action="">
-                <div>
-                    <button>Dodaj</button>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Strona promująca firmę produkującą fronty meblowe" />
+        <meta name="author" content="Bartosz Gębal" />
+        <title>Zamówienia</title>
+        <!-- Favicon-->
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="https://Frontem.eu">Frontem</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="calculator.html">Kalkulator wzorów</a></li>
+                        <li class="nav-item"><a class="nav-link" href="form.html">Zamówienia</a></li>
+                    </ul>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Lp</th>
-                            <th>Wys.</th>
-                            <th>Top</th>
-                            <th>Bot</th>
-                            <th>Szer.</th>
-                            <th>Left</th>
-                            <th>Right</th>
-                            <th>Ilość</th>
-                            <th>2str</th>
-                            <th>Kolor</th>
-                            <th>Materiał</th>
-                            <th>Wykończenie</th>
-                            <th>Opis</th>
-                            <th>m2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                    <div id="entity-edit">
-                        <datalist id="edges">
-                            <option value=""></option>
-                            <option value="F">Uchwyt</option>
-                            <option value="+L">+ lewa kr.</option>
-                            <option value="F45st">Uchwyt 45st</option>
-                        </datalist>
-                        <label for="input__height">Wysokość</label><input type="number" name="height" id="input__height" min="0" step="1" max="3000" value="0">
-                        <label for="input__edge-top">Kr. górna</label><select list="edges" name="edge-top" id="input__edge-top">
-                            <option value=""></option>
-                            <option value="F">Uchwyt</option>
-                            <option value="+L">lewa kr. +Xmm</option>
-                            <option value="F45st">Uchwyt 45st</option>
-                        </select>
-                        <label for="input__edge-bot">Kr. dolna</label><select list="edges" name="edge-bot" id="input__edge-bot">
-                            <option value=""></option>
-                            <option value="F">Uchwyt</option>
-                            <option value="+L">lewa kr. +Xmm</option>
-                            <option value="F45st">Uchwyt 45st</option>
-                        </select>
-                        <label for="input__width">Szerokość</label><input type="number" name="width" id="input__width" min="0" step="1" max="2070" value="0">
-                        <label for="input__edge-left">Kr. lewa</label><select list="edges" name="edge-left" id="input__edge-left">
-                            <option value=""></option>
-                            <option value="F">Uchwyt</option>
-                            <option value="+L">lewa kr. +Xmm</option>
-                            <option value="F45st">Uchwyt 45st</option>
-                        </select>
-                        <label for="input__edge-right">Kr. prawa</label><select list="edges" name="edge-right" id="input__edge-right">
-                            <option value=""></option>
-                            <option value="F">Uchwyt</option>
-                            <option value="+L">lewa kr. +Xmm</option>
-                            <option value="F45st">Uchwyt 45st</option>
-                        </select>
-                        <label for="input__quantity">Ilość</label><input type="number" name="quantity" id="input__quantity" min="1" step="1" value="1">
-                        <label for="input__double-sided">2-stronnie</label><input type="checkbox" name="double-sided" id="input__double-sided">
-                        <label for="input__color">Kolor</label><input type="text" name="color" id="input__color" value="">
-                        <label for="input__material">Materiał</label><select name="material" id="input__material">
-                            <option value="mdf-4">MDF 4mm</option>
-                            <option value="mdf-12">MDF 12mm</option>
-                            <option value="mdf-18">MDF 18mm</option>
-                            <option value="mdf-19">MDF 19mm</option>
-                            <option value="mdf-22">MDF 22mm</option>
-                            <option value="mdf-36">MDF 36mm</option>
-                            <option value="mdf-38">MDF 38mm</option>
-                            <option value="fornir-19">Fornir 19mm</option>  
-                        </select>
-                        <Label for="input__finish">Wykończenie</Label><select name="finish" id="input__finish">
-                            <option value="fornir">Fornir</option>
-                            <option value="fornir-bejca">Fornir bejca</option>
-                            <option value="mat">Mat</option>
-                            <option value="polish">Połysk</option>
-                            <option value="raw">surowe</option>
-                        </select>
-                        <label for="input__description">Opis</label><input type="textbox" name="description" id="input__description" value="">
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container px-4 px-lg-5 ">
+            
+           <main>
+        <div class="my-4" style="position: relative;">
+            
+            <form id="form-orders" onsubmit="return saveOrder()" onreset="cancelOrder()">
+                <div id="orders__controls" class="row my-2">
+                    <label for="input__orders">Dostępne zamówienia</label>
+                    <select name="orders" id="input__orders" class="my-1"  onchange="handleOrderDisplay()">
+                        <option value="all">Wszystkie</option>
+                    </select>
+                    <div id="order__btns1" class=" my-1">
+                    <button id="btn__add" type="button" onclick="handleNewOrder()">Nowe zlecenie</button>
+                    <button id="btn__delete" type="button" onclick="handleDeleteOrder()">Usuń zlecenie</button>
                     </div>
-                </table>
-                <div>
-                    <button type="submit">Zapisz</button>
-                    <button type="reset">Wyczyść</button> 
+                    <div id="order__btns2" class=" my-1">
+                    <button id="btn__submit" type="submit">Zapisz zlecenie</button>
+                    <button id="btn__reset" type="reset">Anuluj zlecenie</button>
+                    </div>
+                    <div id="order__edit">
+                        <div class="input-group my-1 gap-3"><label for="input__date">Data</label><input type="date" name="date" id="input__date" value="" disabled></div>
+                        <div class="input-group my-1 gap-3"><label for="input__full-name">Imię i Nazwisko</label><input type="text" name="full-name" id="input__full-name" value="" required></div>
+                        <div class="input-group my-1 gap-3"><label for="input__email">Email</label><input type="email" name="email" id="input__email" value="" ></div>
+                        <div class="input-group my-1 gap-3"><label for="input__phone">Telefon</label><input type="tel" name="phone" id="input__phone" value="" maxlength="9" required></div>
+                    </div>
                 </div>
+                <div id="orders__display">
+                    <table class="table table-striped" style="overflow-x: scroll;">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Data</th>
+                                <th>Imię i Nazwisko</th>
+                                <th>Email</th>
+                                <th>Telefon</th>
+                                <th>Pow. m2</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders__list">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div id="items__display" style="max-width: 100%;">
+                    <button type="button" class="mb-2" onclick="handleItemNew()">Dodaj pozycje</button>
+                    
+                    <div  style="overflow-x: scroll;">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Lp</th>
+                                    <th>Wys.</th>
+                                    <th>Top</th>
+                                    <th>Bot</th>
+                                    <th>Szer.</th>
+                                    <th>Left</th>
+                                    <th>Right</th>
+                                    <th>Ilość</th>
+                                    <th>2str</th>
+                                    <th>Kolor</th>
+                                    <th>Materiał</th>
+                                    <th>Wykończenie</th>
+                                    <th>Opis</th>
+                                    <th>m2</th>
+                                </tr>
+                            </thead>
+                            <tbody id="items__list">
+                            </tbody>
+                        
+                        </table>
+                    </div>
+
+                </div>    
+            </form>
+            <form id="item__edit" style="display: none; " class="col position-absolute top-0 start-0 p-4 shadow">
+                    <div class="input-group gap-3 my-1">
+                        <label for="input__height">Wysokość</label><input type="number" name="height" id="input__height" min="0" step="1" max="3000" value="0">
+                        <label for="input__edge-top">Kr. górna</label><select name="edge-top" id="input__edge-top">
+                            <option value="-">-</option>
+                            <option value="F">Uchwyt</option>
+                            <option value="+L">lewa kr. +Xmm</option>
+                            <option value="F45st">Uchwyt 45st</option>
+                        </select>
+                        <label for="input__edge-bot">Kr. dolna</label><select name="edge-bot" id="input__edge-bot">
+                            <option value="-">-</option>
+                            <option value="F">Uchwyt</option>
+                            <option value="+L">lewa kr. +Xmm</option>
+                            <option value="F45st">Uchwyt 45st</option>
+                        </select>
+                    </div>
+                    <div class="input-group gap-3 my-1">
+                        <label for="input__width">Szerokość</label><input type="number" name="width" id="input__width" min="0" step="1" max="2070" value="0">
+                        <label for="input__edge-left">Kr. lewa</label><select name="edge-left" id="input__edge-left">
+                            <option value="-">-</option>
+                            <option value="F">Uchwyt</option>
+                            <option value="+L">lewa kr. +Xmm</option>
+                            <option value="F45st">Uchwyt 45st</option>
+                        </select>
+                        <label for="input__edge-right">Kr. prawa</label><select name="edge-right" id="input__edge-right">
+                            <option value="-">-</option>
+                            <option value="F">Uchwyt</option>
+                            <option value="+L">lewa kr. +Xmm</option>
+                            <option value="F45st">Uchwyt 45st</option>
+                        </select>
+                    </div>
+                    <div class="input-group gap-3 my-1"><label for="input__quantity">Ilość</label><input type="number" name="quantity" id="input__quantity" min="1" step="1" value="1"></div>
+                    <div class="input-group gap-3 my-1"><label for="input__double-sided">2-stronny lakier</label><input type="checkbox" name="double-sided" id="input__double-sided"></div>
+                    <div class="input-group gap-3 my-1"><label for="input__color">Kolor</label><input type="text" name="color" id="input__color" value=""></div>
+                    <div class="input-group gap-3 my-1"><label for="input__material">Materiał</label><select name="material" id="input__material">
+                        <option value="mdf-4">MDF 4mm</option>
+                        <option value="mdf-12">MDF 12mm</option>
+                        <option value="mdf-18" selected>MDF 18mm</option>
+                        <option value="mdf-19">MDF 19mm</option>
+                        <option value="mdf-22">MDF 22mm</option>
+                        <option value="mdf-36">MDF 36mm</option>
+                        <option value="mdf-38">MDF 38mm</option>
+                        <option value="fornir-19">Fornir 19mm</option>
+                    </select></div>
+                    <div class="input-group gap-3 my-1"><Label for="input__finish">Wykończenie</Label><select name="finish" id="input__finish">
+                        <option value="fornir">Fornir</option>
+                        <option value="fornir-bejca">Fornir bejca</option>
+                        <option value="mat" selected>Mat</option>
+                        <option value="polish">Połysk</option>
+                        <option value="raw">surowe</option>
+                    </select></div>
+                    <div class="input-group gap-3 my-1">
+                        <label for="input__desc">Opis</label>
+                        <textarea name="description" id="input__desc"></textarea>
+
+                    </div>
+                    <div class="mt-4">
+                        <button type="button" onclick="handleItemNext()">Następny</button>
+                        <button type="button" onclick="handleItemLast()">Zakończ</button>
+                        <button type="button" onclick="handleItemCancel()">Anuluj</button>
+                    </div>
             </form>
         </div>
     </main>
-
-    <footer>
-        <p>Bartosz Gębal &copy; 2025</p>
-    </footer>
-</body>
+            <!-- Heading Row-->
+            <!-- <div class="row gx-4 gx-lg-5 align-items-center my-5">
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." /></div>
+                <div class="col-lg-5">
+                    <h1 class="font-weight-light">Business Name or Tagline</h1>
+                    <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
+                    <a class="btn btn-primary" href="#!">Call to Action!</a>
+                </div>
+            </div>
+            Call to Action
+            <div class="card text-white bg-secondary my-5 py-4 text-center">
+                <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p></div>
+            </div>
+            Content Row
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title">Card One</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                        </div>
+                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title">Card Two</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                        </div>
+                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title">Card Three</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                        </div>
+                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; Bartosz Gębal 2025</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/order.js"></script>
+    </body>
 </html>
